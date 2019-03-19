@@ -12,7 +12,7 @@ export default class App extends Component {
 	state = {
 		store: this.props.store,
 		selectedDetailsPanelIndex: SECTION_PURPOSES,
-		visitedPurposes: {},
+		visitedPurposes: {}
 	};
 
 	onSave = () => {
@@ -21,7 +21,6 @@ export default class App extends Component {
 		notify('onSubmit');
 		store.toggleConsentToolShowing(false);
 	};
-
 
 	onChangeDetailsPanel = panelIndex => {
 		this.props.store.toggleModalShowing(true);
@@ -41,8 +40,7 @@ export default class App extends Component {
 		// If this is the user's first visit according to their cookie data
 		// our workflow is to default all vendor consents to disallow for
 		// each purpose they inspect.
-		if (!created &&
-			!visitedPurposes[purposeItem.id]) {
+		if (!created && !visitedPurposes[purposeItem.id]) {
 			selectAllVendors(false, purposeItem.id);
 		}
 		this.setState({
@@ -59,7 +57,7 @@ export default class App extends Component {
 		});
 	};
 
-	updateState = (store) => {
+	updateState = store => {
 		this.setState({ store });
 	};
 
@@ -69,44 +67,43 @@ export default class App extends Component {
 	}
 
 	render(props, state) {
-
 		const {
 			store,
 			selectedDetailsPanelIndex,
-			selectedPurposeDetails,
+			selectedPurposeDetails
 		} = state;
-		const {
-			theme,
-		} = props;
+		const { theme } = props;
 
 		const {
 			isModalShowing,
 			isBannerShowing,
 			toggleModalShowing,
-			vendorList = {},
+			vendorList = {}
 		} = store;
 
 		const { purposes = [] } = vendorList;
 
 		return (
 			<div class={style.gdpr}>
-				<Banner isShowing={isBannerShowing}
-						isModalShowing={isModalShowing}
-						onSave={this.onSave}
-						onShowModal={toggleModalShowing}
-						onSelectPurpose={this.onSelectPurpose}
-						onChangeDetailsPanel={this.onChangeDetailsPanel}
-						theme={theme}
-						purposes={purposes}
-						selectedPurposeDetails={selectedPurposeDetails}
+				<Banner
+					isShowing={isBannerShowing}
+					isModalShowing={isModalShowing}
+					onSave={this.onSave}
+					onShowModal={toggleModalShowing}
+					onSelectPurpose={this.onSelectPurpose}
+					onChangeDetailsPanel={this.onChangeDetailsPanel}
+					theme={theme}
+					purposes={purposes}
+					selectedPurposeDetails={selectedPurposeDetails}
 				/>
-				<Popup store={store}
-					   onSave={this.onSave}
-					   onChangeDetailsPanel={this.onChangeDetailsPanel}
-					   onSelectPurpose={this.onSelectPurpose}
-					   selectedDetailsPanelIndex={selectedDetailsPanelIndex}
-					   theme={theme}
-					   selectedPurposeDetails={selectedPurposeDetails}
+				<Popup
+					store={store}
+					onSave={this.onSave}
+					onChangeDetailsPanel={this.onChangeDetailsPanel}
+					onSelectPurpose={this.onSelectPurpose}
+					selectedDetailsPanelIndex={selectedDetailsPanelIndex}
+					theme={theme}
+					selectedPurposeDetails={selectedPurposeDetails}
 				/>
 			</div>
 		);

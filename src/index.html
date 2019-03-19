@@ -1,49 +1,130 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>GDPR Documentation</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<script>
-		(function(window) {
-			window.__cmp = (function() {
-				var listen = window.attachEvent || window.addEventListener;
-				listen('message', function(event) {
-					window.__cmp.receiveMessage(event);
-				});
-
-				var commandQueue = [];
-				var cmp = function(command, parameter, callback) {
-					commandQueue.push({
-						command: command,
-						parameter: parameter,
-						callback: callback
+	<head>
+		<meta charset="utf-8" />
+		<title>GDPR Documentation</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimal-ui"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<script>
+			(function(window) {
+				window.__cmp = (function() {
+					var listen = window.attachEvent || window.addEventListener;
+					listen('message', function(event) {
+						window.__cmp.receiveMessage(event);
 					});
-				};
-				cmp.commandQueue = commandQueue;
-				cmp.receiveMessage = function(event) {
-					var data = event && event.data && event.data.__cmpCall;
-					if (data) {
-						commandQueue.push({
-							callId: data.callId,
-							command: data.command,
-							parameter: data.parameter,
-							event: event
-						});
-					}
-				};
-				cmp.config = {
-					customPurposeListLocation: 'docs/purposes.json',
-					globalConsentLocation: 'docs/portal.html'
-				};
-				return cmp;
-			}());
-		})(window);
 
-		__cmp('showConsentTool');
-	</script>
-</head>
-<body>
-</body>
+					var commandQueue = [];
+					var cmp = function(command, parameter, callback) {
+						commandQueue.push({
+							command: command,
+							parameter: parameter,
+							callback: callback
+						});
+					};
+					cmp.commandQueue = commandQueue;
+					cmp.receiveMessage = function(event) {
+						var data = event && event.data && event.data.__cmpCall;
+						if (data) {
+							commandQueue.push({
+								callId: data.callId,
+								command: data.command,
+								parameter: data.parameter,
+								event: event
+							});
+						}
+					};
+					cmp.config = {
+						globalVendorListLocation: 'docs/vendorlist.json',
+						customPurposeListLocation: 'docs/purposes.json',
+						globalConsentLocation: 'docs/portal.html',
+						localization: {
+							sv: {
+								banner: {
+									title:
+										'Annonser hjälper oss att driva denna site',
+									description:
+										'När du besöker vår webbplats kan förvalda företag komma åt och använda viss information på din enhet och om den här webbplatsen för att visa relevanta annonser eller personligt innehåll.',
+									links: {
+										data: {
+											title:
+												'Information som kan användas',
+											description: ''
+										},
+										purposes: {
+											title:
+												'Syfte för lagring av information',
+											description:
+												'Hur informationen kan anvädas:'
+										},
+										manage: 'Ändra inställningar',
+										accept: 'Fortsätt till site'
+									}
+								},
+								summary: {
+									title: '',
+									description: '',
+									who: {
+										title: '',
+										description: ''
+									},
+									what: {
+										title: '',
+										description: ''
+									}
+								},
+								details: {
+									back: '',
+									save: ''
+								},
+								purposes: {
+									title: '',
+									description: '',
+									back: '',
+									optoutdDescription: ``,
+									purpose1: {
+										description: ''
+									},
+									purpose2: {
+										description: ''
+									},
+									purpose3: {
+										description: ''
+									},
+									purpose4: {
+										description: ''
+									}
+								},
+								vendors: {
+									title: '',
+									description: '',
+									accept: '',
+									acceptAll: '',
+									acceptNone: '',
+									optOut: '',
+									back: ''
+								}
+							}
+						},
+						theme: {
+							primaryColor: '#2D9CDB',
+							primaryTextColor: '#fff',
+							secondaryColor: '#626262',
+							secondaryTextColor: '#fff',
+							textLinkColor: '#2D9CDB',
+							textColor: 'rgba(0, 0, 0, 0.8)',
+							textLightColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					};
+					return cmp;
+				})();
+			})(window);
+
+			__cmp('showConsentTool');
+		</script>
+	</head>
+
+	<body></body>
 </html>

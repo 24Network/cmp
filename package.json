@@ -1,6 +1,8 @@
 {
-  "name": "appnexus-cmp",
-  "version": "0.0.0",
+  "name": "@northosts/cmp",
+  "description": "CMP for 24Sverige built on the IAB CMP framework",
+  "version": "0.0.1",
+  "main": "build/cmp.bundle.js",
   "scripts": {
     "clean": "rm -rf build",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
