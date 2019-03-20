@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "purposes": [
+        {
+            "id": 1,
+            "name": "Lagring och tillgång av information",
+            "description": "Lagring av information eller tillgång till information som redan har lagrats på din användarenhet så som reklamidentifierare, enhetsidentifierare, cookies och liknande teknik."
+        },
+        {
+            "id": 2,
+            "name": "Personifiering",
+            "description": "Insamling och behandling av information om ditt utnyttjande av den här tjänsten för att därefter personanpassa annonser och/eller innehåll till dig i andra sammanhang, som t.ex. på andra webbplatser eller appar, över tid. Vanligtvis används innehållet på webbplatsen eller appen för att dra slutsatser om dina intressen, som sedan ligger till grund för framtida urval av annonser och/eller innehåll."
+        },
+        {
+            "id": 3,
+            "name": "Annonsurval, leverans, rapportering",
+            "description": "Insamling av information och samkörning med tidigare insamlad information, för att välja ut och leverera annonser till dig, och värdera leverans och effektivitet av sådana annonser. Detta inkluderar att använda tidigare insamlad information om dina intressen för att välja ut annonser, behandla data om vilka annonser som visades, hur ofta de visades, när och var de visades och om du vidtog några åtgärder relaterade till annonsen, inklusive att till exempel klicka på en annons eller göra ett inköp. Detta inkluderar inte personifiering, vilket innebär insamling och behandling av information om ditt utnyttjande av den här tjänsten för att därefter personanpassa annonser och/eller innehåll till dig i andra sammanhang, som t.ex. webbplatser eller appar, över tid."
+        },
+        {
+            "id": 4,
+            "name": "Innehållsurval, leverans, rapportering",
+            "description": "Insamling av information och samkörning med tidigare insamlad information, för att välja ut och leverera innehåll till dig och för att värdera leverans och effektivitet av sådant innehåll. Detta inkluderar att använda tidigare insamlad information om dina intressen för att välja ut innehåll, behandla data om vilket innehåll som visades, hur ofta eller hur länge det visades, när och var det visades och om du vidtog några åtgärder relaterade till innehållet, inklusive att till exempel klicka på innehåll. Detta inkluderar inte personifiering, vilket innebär insamling och behandling av information om ditt utnyttjande av den här tjänsten för att därefter personanpassa innehåll och/eller annonser till dig i andra sammanhang, som t.ex. webbplatser eller appar, över tid."
+        },
+        {
+            "id": 5,
+            "name": "Värdering",
+            "description": "Insamling av information om ditt utnyttjande av innehållet, och samkörning med tidigare insamlad information, som används för att värdera, förstå och rapportera om ditt utnyttjande av tjänsten. Detta inkluderar inte personifiering, vilket innebär insamling av information om ditt utnyttjande av den här tjänsten för att därefter personanpassa innehåll och/eller annonser, dvs. i andra tjänster, som t.ex. webbplatser eller appar, över tid."
+        }
+    ]
+}

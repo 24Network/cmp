@@ -35,11 +35,14 @@
 								event: event
 							});
 						}
-					};
+                    };
+                    
 					cmp.config = {
-						globalVendorListLocation: 'docs/vendorlist.json',
-						customPurposeListLocation: 'docs/purposes.json',
-						globalConsentLocation: 'docs/portal.html',
+						// customPurposeListLocation: './purposes.json',
+						globalVendorListLocation: './vendorlist.json',
+                        globalConsentLocation: './portal.html',
+                        storeConsentGlobally: true,
+                        storePublisherData: true,
 						localization: {
 							sv: {
 								banner: {
@@ -64,11 +67,11 @@
 									}
 								},
 								summary: {
-									title: '',
-									description: '',
+									title: 'Learn more about how information is being used?',
+									description: "We and select companies may access and use your information for the below purposes. You may customize your choices below or continue using our site if you're OK with the purposes.",
 									who: {
-										title: '',
-										description: ''
+										title: 'Who is using this information?',
+										description: `We and pre-selected companies will use your information. You can see each company in the links above or see the complete list here.`
 									},
 									what: {
 										title: '',
@@ -84,18 +87,6 @@
 									description: '',
 									back: '',
 									optoutdDescription: ``,
-									purpose1: {
-										description: ''
-									},
-									purpose2: {
-										description: ''
-									},
-									purpose3: {
-										description: ''
-									},
-									purpose4: {
-										description: ''
-									}
 								},
 								vendors: {
 									title: '',
@@ -116,8 +107,9 @@
 							textLinkColor: '#2D9CDB',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							textLightColor: 'rgba(0, 0, 0, 0.5)'
-						}
-					};
+                        },
+                    };
+                    
 					return cmp;
 				})();
 			})(window);
