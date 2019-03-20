@@ -66,7 +66,7 @@ const defaultConfig = {
 	forceLocale: null,
 	gdprApplies: true,
 	gdprAppliesGlobally: false,
-	allowedVendorIds: [1, 2, 3],
+	allowedVendorIds: null,
 	theme: {
 		primaryColor: '#2D9CDB',
 		primaryTextColor: '#fff',
