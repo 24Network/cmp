@@ -38,7 +38,7 @@ const defaultConfig = {
 					description: `We and pre-selected companies will use your information. You can see each company in the links above or see the complete list here.`
 				},
 				what: {
-					title: '',
+					title: 'What title',
 					description: ''
 				}
 			},
