@@ -26,19 +26,17 @@ const defaultConfig = {
                                         <li>Den IP-adress från vilken enheten får åtkomst till en kunds webbplats eller mobilapplikation</li>
                                         <li>Information om användarens aktivitet på den enheten, inklusive webbsidor och mobilappar som har besökts eller använts</li>
                                         <li>Information om den geografiska platsen för enheten när den kommer åt en webbplats eller mobilapplikation</li>
-                                    </ul>
-                        `
+                                    </ul>`
 					},
 					purposes: {
 						title: 'Syfte för lagring av information.',
 						description: `<ul>
-                                        <li>Informationslagring och åtkomst</li>
-                                        <li>Anpassning</li>
-                                        <li>Annonsval, leverans, rapportering</li>
-                                        <li>Innehållsval, leverans, rapportering</li>
-                                        <li>Mått</li>
-                                    </ul>
-                        `
+                                            <li>Informationslagring och åtkomst</li>
+                                            <li>Anpassning</li>
+                                            <li>Annonsval, leverans, rapportering</li>
+                                            <li>Innehållsval, leverans, rapportering</li>
+                                            <li>Mått</li>
+                                        </ul>`
 					},
 					manage: 'Ändra inställningar',
 					accept: 'Fortsätt till webbplats'
@@ -69,7 +67,6 @@ const defaultConfig = {
 				description:
 					'Nedan finns en komplett lista över de uppgifter som kan samlas in.',
 				back: 'Tillbaka',
-				optoutdDescription: `Beroende på vilken typ av data de samlar in, använder, behandlar och andra faktorer, inklusive integritet genom design, är vissa partners beroende av ditt samtycke medan andra kräver att du avregistrerar dig. För information om varje leverantör och möjligheten att utöva dina val, se nedan. Vill du välja bort, besök då <a href="http://optout.networkadvertising.org/?c=1#!/" target="_blank">NAI</a>, <a href="http://optout.aboutads.info/?lang=EN&c=2#!/" target="_blank">DAA</a> eller <a href="http://www.youronlinechoices.com/" target="_blank">EDAA</a> för mer information.`,
 				items: `<ul>
                             <li>Typ av webbläsare och dess inställningar</li>
                             <li>Information om enhetens operativsystem</li>
@@ -78,7 +75,8 @@ const defaultConfig = {
                             <li>Den IP-adress från vilken enheten får åtkomst till en kunds webbplats eller mobilapplikation</li>
                             <li>Information om användarens aktivitet på den enheten, inklusive webbsidor och mobilappar som har besökts eller använts</li>
                             <li>Information om den geografiska platsen för enheten när den kommer åt en webbplats eller mobilapplikation</li>
-                        </ul>`
+                        </ul>`,
+				optoutdDescription: `Beroende på vilken typ av data de samlar in, använder, behandlar och andra faktorer, inklusive integritet genom design, är vissa partners beroende av ditt samtycke medan andra kräver att du avregistrerar dig. För information om varje leverantör och möjligheten att utöva dina val, se nedan. Vill du välja bort, besök då <a href="http://optout.networkadvertising.org/?c=1#!/" target="_blank">NAI</a>, <a href="http://optout.aboutads.info/?lang=EN&c=2#!/" target="_blank">DAA</a> eller <a href="http://www.youronlinechoices.com/" target="_blank">EDAA</a> för mer information.`
 			},
 			vendors: {
 				title: '',
