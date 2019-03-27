@@ -3,9 +3,9 @@ import log from './log';
 // These options are documented at https://acdn.adnxs.com/cmp/docs/#/config
 // We highly recommend reading the options as the defaults may not fit your goals.
 const defaultConfig = {
-	customPurposeListLocation: '/purposes.json',
-	globalVendorListLocation: '/vendorlist.json',
-	globalConsentLocation: '/portal.html',
+	globalVendorListLocation: 'https://vendorlist.consensu.org/vendorlist.json',
+	customPurposeListLocation: '/cmp/purposes.json',
+	globalConsentLocation: '/cmp/portal.html',
 	storeConsentGlobally: false,
 	storePublisherData: false,
 	logging: false,
@@ -79,12 +79,13 @@ const defaultConfig = {
 				optoutdDescription: `Beroende på vilken typ av data de samlar in, använder, behandlar och andra faktorer, inklusive integritet genom design, är vissa partners beroende av ditt samtycke medan andra kräver att du avregistrerar dig. För information om varje leverantör och möjligheten att utöva dina val, se nedan. Vill du välja bort, besök då <a href="http://optout.networkadvertising.org/?c=1#!/" target="_blank">NAI</a>, <a href="http://optout.aboutads.info/?lang=EN&c=2#!/" target="_blank">DAA</a> eller <a href="http://www.youronlinechoices.com/" target="_blank">EDAA</a> för mer information.`
 			},
 			vendors: {
-				title: '',
-				description: '',
+				title: 'Vem använder informationen?',
+				description:
+					'Nedan finner du den fullständiga listan över företag som kommer att använda din information. Vänligen se deras sekretesspolicy för mer information.',
 				accept: 'Acceptera',
 				acceptAll: 'Tillåt alla',
 				acceptNone: 'Tillåt ingen',
-				optOut: '',
+				optOut: 'Kräver avhopp',
 				back: 'Tillbaka'
 			}
 		}
