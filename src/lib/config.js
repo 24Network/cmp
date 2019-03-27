@@ -31,12 +31,12 @@ const defaultConfig = {
 					purposes: {
 						title: 'Syfte för lagring av information.',
 						description: `<ul>
-                                            <li>Informationslagring och åtkomst</li>
-                                            <li>Anpassning</li>
-                                            <li>Annonsval, leverans, rapportering</li>
-                                            <li>Innehållsval, leverans, rapportering</li>
-                                            <li>Mått</li>
-                                        </ul>`
+                                        <li>Informationslagring och åtkomst</li>
+                                        <li>Anpassning</li>
+                                        <li>Annonsval, leverans, rapportering</li>
+                                        <li>Innehållsval, leverans, rapportering</li>
+                                        <li>Mått</li>
+                                    </ul>`
 					},
 					manage: 'Ändra inställningar',
 					accept: 'Fortsätt till webbplats'

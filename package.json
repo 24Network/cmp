@@ -1,7 +1,7 @@
 {
   "name": "@northosts/cmp",
   "description": "CMP for 24Sverige built on the IAB CMP framework",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "main": "build/cmp.complete.bundle.js",
   "scripts": {
     "clean": "rm -rf build",
